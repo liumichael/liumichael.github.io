@@ -8,4 +8,4 @@ Hi Welcome to my site.
 
 My name is Michael and I am a software engineer.
 
-I am still working on this site to stay tuned!
+I am still working on this site so stay tuned!
