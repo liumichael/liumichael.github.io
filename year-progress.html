@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Year Progress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .progress-container {
+            width: 80%;
+            background-color: #e0e0df;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 50px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-size: 1.5em;
+        }
+        .time-left {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        function updateTimeData() {
+            const now = new Date();
+            const start = new Date(now.getFullYear(), 0, 0);
+            const nextYear = new Date(now.getFullYear() + 1, 0, 0);
+
+            const elapsedMilliseconds = now.getTime() - start.getTime();
+            const totalMillisecondsInYear = nextYear.getTime() - start.getTime();
+
+            const progress = ((elapsedMilliseconds / totalMillisecondsInYear) * 100).toFixed(8);
+
+            const millisecondsLeft = nextYear.getTime() - now.getTime();
+            const daysLeft = Math.floor(millisecondsLeft / (1000 * 60 * 60 * 24));
+            const hoursLeft = Math.floor((millisecondsLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutesLeft = Math.floor((millisecondsLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const secondsLeftForDisplay = Math.floor((millisecondsLeft % (1000 * 60)) / 1000);
+
+            document.querySelector('.progress-bar').style.width = `${progress}%`;
+            document.querySelector('.progress-bar').textContent = `${progress}%`;
+            document.querySelector('.time-left').textContent = 
+                `${daysLeft} days, ${hoursLeft} hours, ` +
+                `${minutesLeft} minutes, ${secondsLeftForDisplay} seconds left in the year`;
+        }
+
+        setInterval(updateTimeData, 1000); // Update data every second
+        window.onload = updateTimeData; // Update data when the page loads
+    </script>
+</head>
+<body>
+    <h1>Year Progress <span id="year"></span></h1>
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    <div class="time-left"></div>
+
+    <script>
+        // Set the year when the page loads
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
