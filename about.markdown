@@ -4,15 +4,33 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi I am currently a software developer for General Motors in Toronto, Canada
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I have an interest in making things more efficient.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+----
 
+Here are my work experiences
 
-[jekyll-organization]: https://github.com/jekyll
+### General Motors (2023 - Present)
+#### Android Developer
+
+### Amazon (2021 - 2023)
+#### Software Development Engineer
+
+### BrioXR - Acquired by Adobe (2020 - 2021)
+#### Web Developer
+
+### Environment Canada (2018 - 2019)
+#### Software Developer Intern
+
+### BrioXR - Acquired by Adobe (2018)
+#### Software Developer Intern
+
+----
+## Education
+
+### Univeristy of Toronto (2015 - 2020)
+#### B.Sc. Specialist in Computer Science
+##### Graduated with distinction
+
